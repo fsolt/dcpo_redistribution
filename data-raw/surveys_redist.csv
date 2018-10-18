@@ -139,13 +139,13 @@ ess6,gov_res5,gincdif,c(5:1),"c(7,8,9)"
 ess7,gov_res5,gincdif,c(5:1),"c(7,8,9)"
 evs_combo,free_eq2,e032,c(1:2),3
 evs_combo,incent10,e035,c(10:1),
-feb227,future_red4,q3_h,c(4:1),
-icenes1995,gov_res5,gincdif,"c(7, 8, 9)",
-icenes1999,gov_res5,gincdif,"c(7, 8, 9)",
-icenes2003,gov_res5,gincdif,"c(7, 8, 9)",
-icenes2007,gov_res5,gincdif,"c(7, 8, 9)",
-icenes2009,gov_res5,gincdif,"c(7, 8, 9)",
-icenes2013,gov_res5,gincdif,"c(7, 8, 9)",
+feb227,future_red4,q3_h,c(4:1),9
+icenes1995,gov_res5,gincdif,c(5:1),"c(7, 8, 9)"
+icenes1999,gov_res5,gincdif,c(5:1),"c(7, 8, 9)"
+icenes2003,gov_res5,gincdif,c(5:1),"c(7, 8, 9)"
+icenes2007,gov_res5,gincdif,c(5:1),"c(7, 8, 9)"
+icenes2009,gov_res5,gincdif,c(5:1),"c(7, 8, 9)"
+icenes2013,gov_res5,gincdif,c(5:1),"c(7, 8, 9)"
 issp1985,gov_res4,v107,c(4:1),
 issp1985,gov_res5,v30,c(5:1),
 issp1985,taxshare5,v29,c(5:1),
@@ -165,7 +165,7 @@ issp1992,taxshare5,v66,c(5:1),
 issp1996,gov_res4,v42,c(4:1),
 issp1996,gov_res5,v16,c(5:1),
 issp1998,gov_res4,v6,c(4:1),
-issp1999,gov_res5,v35,c(5:1),
+issp1999,gov_res5,v35,c(5:1),"c(8, 9)"
 issp1999,grow5,v11,c(5:1),
 issp1999,incgap5,v34,c(5:1),
 issp2000,gov_res5,v5,c(5:1),
