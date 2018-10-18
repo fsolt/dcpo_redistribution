@@ -130,7 +130,11 @@ eb741,grow4,v167,c(1:4),
 eb741,incgap4,v162,c(4:1),
 eb741,redist4,v163,c(4:1),
 eb815,incgap4,qa7_1,c(4:1),5
-ess_combo,gov_res5,gincdif,c(5:1),
+ess1,gov_res5,gincdif,c(5:1),"c(7,8,9)"
+ess2,gov_res5,gincdif,c(5:1),"c(7,8,9)"
+ess3,gov_res5,gincdif,c(5:1),"c(7,8,9)"
+ess4,gov_res5,gincdif,c(5:1),"c(7,8,9)"
+ess5,gov_res5,gincdif,c(5:1),"c(7,8,9)"
 ess6,gov_res5,gincdif,c(5:1),"c(7,8,9)"
 ess7,gov_res5,gincdif,c(5:1),"c(7,8,9)"
 evs_combo,free_eq2,e032,c(1:2),3
