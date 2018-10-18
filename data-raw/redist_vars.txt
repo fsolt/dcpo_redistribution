@@ -1,0 +1,323 @@
+
+free_eq2
+WVS90; EVS81, 1990, 1999; EB30-88 [v121]
+E032.- Freedom or equality
+Which of these two statements comes closest to your own opinion?
+A. I find that both freedom and equality are important. But if I were to choose one or the other, I would consider personal freedom more important, that is, everyone can live in freedom and develop without hinderance
+B. Certainly both freedom and equality are important. But if I were to choose one or the other, I would consider equality more important, that is, that nobody is underprivileged and that social class differences are not so strong.
+1 'Freedom above equality' 2 'Equality above freedom' 3 'Neither'
+-1 'Don ́t know'
+-2 'No answer'
+-3 'Not applicable'
+-4 'Not asked in survey' -5 'Missing; Unknown'
+
+incent10
+WVS & EVS
+E035.- Income equality
+Now I'd like you to tell me your views on various issues. How would you place your views on this scale? 1 means you agree completely with the statement on the left; 10 means you agree completely with the statement on the right; and if your views fall somewhere in between, you can choose any number in between. Sentences:
+Incomes should be made more equal vs We need larger income differences as incentives
+1 'Incomes should be made more equal' 2 '2'
+3 '3'
+4 '4'
+5 '5'
+6 '6'
+7 '7'
+8 '8'
+9 '9'
+10 'We need larger income differences as incentives'
+
+effort4
+EB11-79 v73; EB16-81 v52; EB19-83 v141
+Q.159
+we'd like to hear your views on some important political issues. could you tell me whether you agree or disagree with each of the following proposals? how strongly do you feel? (interviewer: show respondent card f.)
+q.159_c greater efforts should be made to reduce inequality of income?
+0 dk;na
+1 agree strongly
+2 agree
+3 disagree
+4 disagree strongly
+
+effort5
+ptvs2008 CS_G21.18; ptvs2012
+Bigger efforts would have to be made to reduce the income inequalities
+
+
+The government should take measures to reduce differences in income levels
+
+import4
+EB10-78 v54; EB20-83 v45; EB28-87 v195, EB36-91 v220; EB44.1-95 v602; EB5-76 v7; EB6-77 v75
+HERE IS A LIST OF PROBLEMS THAT PEOPLE OF (YOUR COUNTRY) ARE MORE OR LESS INTERESTED IN. (SHOW CARD)
+AND FOR EACH OF THESE PROBLEMS,
+COULD YOU PLEASE TELL ME FOR ECH ONE WHETHER YOU PERSONALLY CONSIDER IT IS A VERY IMPORTANT PROBLEM, OF LITTLE IMPORTANCE, OR NOT IMPORTANT AT ALL?
+
+TRY AND REDUCE THE NUMBER BOTH OF VERY RICH AND VERY POOR PEOPLE
+0 DKNA
+1 VERY IMPORTANT
+2 IMPORTANT
+3 FAIRLY IMPORTANT
+4 NOT IMPORTANT AT ALL
+
+import2
+EB44.3 v490
+Q.105_10 It is very important to try and reduce the difference between the very rich and the very poor people
+0 (NA)
+1 Tend to agree
+2 Tend to disagree
+3 DK
+
+incgap5
+EB52.1-99 v356; EB56.1-01 v263; ISSP87 V48; ISSP92 V56; ISSP99 V56; ISSP09 V32; USGSS INCGAP; BSA
+Please tell me to what extent you agree or disagree with each of the following statements. (SHOW CARD WITH SCALE)
+(READ OUT)
+Q.28_3 The differences in income in (OUR COUNTRY) are too wide [large]
+0 NA
+1 Strongly agree
+2 Somewhat agree
+3 Neither agree nor disagree
+4 Somewhat disagree
+5 Strongly disagree
+6 DK
+
+incgap4
+EB72.1-09 v160; EB74.1-10 v162; EB81.5-14 qa7_1
+For each of the following statements, please tell me whether you ...
+(SHOW CARD WITH SCALE – ONE ANSWER PER LINE - READ OUT – ROTATE)
+Q.A14_2 Nowadays in (OUR COUNTRY) income differences between people are far too large
+1 Totally agree
+2 Tend to agree
+3 Tend to disagree
+4 Totally disagree
+5 DK
+
+incgap3
+bsa
+Thinking of income levels generally in Britain today, would you say that the gap between those with high incomes and those with low incomes is too large, about right, or, too small?
+Values	Categories	N
+1	too large	1549	
+2	about right	467	
+3	too small	48	
+8	Don't know	80	
+9	Not answered	2	
+
+redist2
+EB58-02 v437
+Q.20
+Now I am going to read you a number of statements. Please tell me whether you tend to agree or tend to disagree with each one? (READ OUT TOP/BOTTOM/TOP ALTERNATELY)
+Q.20_14 The government should redistribute income from the better-off to the less well off
+1 Tend to agree
+2 Tend to disagree
+
+redist4
+EB72.1-09 v161; EB76.1-10 v163
+For each of the following statements, please tell me whether you ...
+(SHOW CARD WITH SCALE – ONE ANSWER PER LINE - READ OUT – ROTATE)
+Q.A14_3 The (NATIONALITY) Government should ensure that the wealth of the country is redistributed in a fair way to all citizens
+1 Totally agree
+2 Tend to agree
+3 Tend to disagree
+4 Totally disagree
+5 DK
+
+redist5
+ISSP2000 V65; BSA; ptvs2008 ccs_g21_8
+Government should redistribute income from the
+better-off to those who are less well-off
+1. Strongly agree
+2. Agree
+3. Neither agree nor disagree
+4. Disagree
+5. Strongly disagree
+
+equality3
+dkes1979-2011
+A: Differences in income and living standards are still too big here in the country. Therefore, people with less income should get a quicker improvement in living standards than those with higher income, or B: Revenue equalization has gone far enough. The revenue differentials still exist should be largely maintained
+1	Agree with A
+2	Agree with B
+3	Neither
+
+equality5
+dkes1971-2011
+Please indicate how much you agree or disagree in every point of view. – In politics one should strive to give everyone the same economic conditions, regardless of education and occupation
+1	Quite agree
+2	Partly agree
+3	Neither agree nor disagree
+4	Partly disagree
+5	Quite disagree
+
+future_red4
+Flash EB 227-08 Q3h
+Political directions and decisions have an impact on what the future will look like. So, thinking about the long- term future of [OUR COUNTRY], do you strongly agree, agree, disagree or strongly disagree with the following statements about possible political choices?
+
+Strongly agree 	1 - 
+Agree 		2 - 
+Disagree 	3 - 
+Strongly disagree	4 - 
+[DK/NA]		9
+h) There should be policies ensuring that the gap between the rich and the poor is reduced significantly
+in [OUR COUNTRY]
+
+grow4
+EB72.1-09 v165; EB74.1-10 v167
+For each of the following statements, please tell me whether you ...
+(SHOW CARD WITH SCALE – ONE ANSWER PER LINE - READ OUT – ROTATE)
+Q.A14_7 Income inequalities are necessary for economic development
+1 Totally agree
+2 Tend to agree
+3 Tend to disagree
+4 Totally disagree
+5 DK
+
+Some EBs ask whether "rich get richer" (26, 30, 31A, 40, 47.1). Item also in GSS
+
+gov_res4
+ISSP85 V107; ISSP90 V55; ISSP91 V6; ISSP96 V42; ISSP98 V6; ISSP06 v31; ISSP16 v27; 
+USGSS EQUALIZE; LB96 p28e; BSA 
+Government’s responsibility: Reduce income differences
+between the rich and the poor?
+    1.  Definitely should be
+        SLO, N: Yes, completely
+        RUS: Strongly agree
+    2.  Probably should be
+        SLO, N: Yes, partially
+        RUS: Rather agree
+    3.  Probably should not be
+        SLO, N: NO
+        RUS: Rather disagree
+    4.  Definitely should not be
+        RUS: Strongly disagree
+    8.  Can’t choose, don’t know
+    9.  NA
+
+gov_res5
+ess gincdif
+Government should reduce differences in income levels
+icenes gincdif
+Government should use its power to increase the equality of the income distribution in society
+
+AsianB2 q145 [I don't have these data]
+In order to preserve social justice, the government should prevent the gap between rich and poor from growing any larger. SA 1 SWA 2 SWD 3 D 4 Don't understand 7 Can't choose 8 decline 9
+
+gov_res5
+ISSP85 V30; ISSP90 V24; ISSP92 V57; ISSP96 V16; ISSP99 V57; ISSP00 V5; ISSP09 V33; ISSP10 V8; USGSS EQINCOME; JGSS Q5GVEQAA; BSA
+It is the responsibility of the government to reduce
+the differences in income between people with high incomes
+and those with low incomes
+<Complete question text Q.1>
+    1. Strongly agree
+    2. Agree
+    3. Neither agree nor disagree
+    4. Disagree
+    5. Strongly disagree
+    8. Can’t choose, don’t know
+       <AUS: not sure>
+    9. NA
+    0. PL: Not available
+
+gov_res7
+AmB ros3
+El Estado (gentilicio) debe implementar políticas firmes para reducir la desigualdad de ingresos entre ricos y pobres. ¿Hasta qué punto está de acuerdo o en desacuerdo con esta frase? 1 Muy en desacuerdo 7 Muy de acuerdo
+
+USGSS EQWLTH; 
+Some people think that the government in Washington ought to reduce the income differences between the rich and the poor, perhaps by raising the taxes of wealthy families or by giving income assistance to the poor. Others think that the government should not concern itself with reducing this income difference between the rich and the poor.
+Here is a card with a scale from 1 to 7. Think of a score of 1 as meaning that the government ought to reduce the income differences between rich and poor, and a score of 7 meaning that the government should not concern itself with reducing income differences. What score between 1 and 7 comes closest to the way you feel? (CIRCLE ONE)
+
+
+grow5
+ISSP87 V23; ISSP92 V23; ISSP99 v11; USGSS INEQUAL5; PGSS INEQUAL5
+Large differences in income are necessary for
+<R’s country> prosperity.
+    1. Strongly agree
+    2. Agree
+    3. Neither agree nor disagree
+    4. Disagree
+    5. Strongly disagree
+    8. Can’t choose, don’t know
+       <AUS: not sure>
+    9. NA
+    0. PL: Not available
+
+eq_grow5
+AsiaB05 q32c; AsiaB06 q36c; AsiaB07 q37c
+It is desirable that the people are equal, even if the economy is stagnant, rather than inequal but developing fast.
+    1. Strongly agree
+    2. Agree
+    3. Neither agree nor disagree
+    4. Disagree
+    5. Strongly disagree
+    9. Don't know
+
+taxshare5
+ISSP85 V29; ISSP87 V58; ISSP90 V23; ISSP92 V66; ISSP09 V36; USGSS TAXSHARE; PGSS TAXSHARE
+Do you think that people with high incomes should pay a
+larger share of their income in taxes than those with low
+incomes, the same share, or a smaller share?
+    1. Much larger share
+    2. Larger
+    3. The same share
+    4. Smaller
+    5. Much smaller share
+    8. Can’t choose, don’t know
+       <AUS: not sure>
+    9. NA
+    0. PL: Not available
+
+basic5
+ISSP87 V54; ISSP92 V62, BSA
+The government should provide everyone with a guaranteed
+basic income.
+<See Q.7 for complete question text.>
+    1. Agree strongly
+    2. Agree
+    3. Neither agree nor disagree
+    4. Disagree
+    5. Disagree strongly
+    8. Can’t choose, don’t know
+       <AUS: not sure>
+    9. NA
+    0. PL: Not available
+
+incent4
+ISSP87 V18; ISSP92 V18; USGSS INCENTIV; ALLBUS v206
+Some people earn a lot of money while others do not earn
+very much at all ...
+In order to get people to work hard, do you think large
+differences in pay are ...
+    1. Absolutely necessary
+    2. Probably necessary
+    3. Probably not necessary
+    4. Definitely not necessary
+    7. PL: Not asked in version X of the questionnaire
+    8. Can’t choose, don’t know
+       <AUS: not sure>
+    9. NA
+
+
+
+USGSS RICHPOOR;
+People should be allowed to accumulate as much wealth as they can even if some make millions while others live in poverty.
+
+##### Not used (yet)
+
+Dutch Parliamentary Election Study Cumulative Dataset, 1971-2006 V38_10 [7 cy]
+Some people and parties think that the differences in incomes in our country should be increased (at number 1). Others think that these differences should be decreased (at number 7). Of course, there are also people whose opinion is somewhere in between. And where would you place yourself?
+
+EB66.3-06 v211
+Q.A26A
+I am going to show you a card with a list of topics. Thinking of (OUR COUNTRY), please tell me which 3 topics from this list currently concern you the most.
+(SHOW CARD - MAX. 3 ANSWERS PER COLUMN)
+Q.A26A_13 The gap between the rich and the poor
+0 Not mentioned
+1 Mentioned
+9 Inap. not EU27 (not coded 1 to 30 in V6)
+
+EB52.1-99 v355
+Please tell me to what extent you agree or disagree with each of the following statements. (SHOW CARD WITH SCALE)
+(READ OUT)
+Q.28_2 The government should spend more on social welfare
+0 NA
+1 Strongly agree
+2 Somewhat agree
+3 Neither agree nor disagree
+4 Somewhat disagree
+5 Strongly disagree
+6 DK
