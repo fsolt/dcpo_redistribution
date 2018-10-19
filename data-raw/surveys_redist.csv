@@ -149,10 +149,18 @@ icenes2013,gov_res5,gincdif,c(5:1),"c(7, 8, 9)"
 issp1985,gov_res4,v107,c(4:1),
 issp1985,gov_res5,v30,c(5:1),
 issp1985,taxshare5,v29,c(5:1),
-issp1987,grow5,v23,c(1:5),
 issp1987,incent4,v18,c(1:4),
+issp1987,grow5,v23,c(1:5),
 issp1987,incgap5,v48,c(5:1),
+issp1987,gov_res5,v49,c(5:1),
+issp1987,basic5,v54,c(5:1),
 issp1987,taxshare5,v58,c(5:1),
+issp1987ie,incent4,v18,c(1:4),"c(8, 9)"
+issp1987ie,grow5,v23,c(1:5),j8jj
+issp1987ie,incgap5,v48,c(5:1),"c(8, 9)"
+issp1987ie,gov_res5,v49,c(5:1),"c(8, 9)"
+issp1987ie,basic5,v54,c(5:1),"c(8, 9)"
+issp1987ie,taxshare5,v58,c(5:1),"c(8, 9)"
 issp1990,gov_res4,v55,c(4:1),
 issp1990,gov_res5,v24,c(5:1),
 issp1990,taxshare5,v23,c(5:1),
