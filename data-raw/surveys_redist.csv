@@ -157,24 +157,54 @@ issp1990,gov_res4,v55,c(4:1),
 issp1990,gov_res5,v24,c(5:1),
 issp1990,taxshare5,v23,c(5:1),
 issp1991,gov_res4,v6,c(4:1),
-issp1992,gov_res5,v57,c(5:1),
 issp1992,grow5,v23,c(1:5),
 issp1992,incent4,v18,c(1:4),
 issp1992,incgap5,v56,c(5:1),
+issp1992,gov_res5,v57,c(5:1),
 issp1992,taxshare5,v66,c(5:1),
 issp1996,gov_res4,v42,c(4:1),
 issp1996,gov_res5,v16,c(5:1),
 issp1998,gov_res4,v6,c(4:1),
+issp1999,grow5,v11,c(1:5),"c(8, 9)"
+issp1999,incgap5,v34,c(5:1),"c(8, 9)"
 issp1999,gov_res5,v35,c(5:1),"c(8, 9)"
-issp1999,grow5,v11,c(5:1),
-issp1999,incgap5,v34,c(5:1),
+issp1999,taxshare5,v36,c(5:1),"c(8, 9)"
+issp1999br,grow5,v11,c(1:5),"c(8, 9)"
+issp1999br,incgap5,v34,c(5:1),"c(8, 9)"
+issp1999br,gov_res5,v35,c(5:1),"c(8, 9)"
+issp1999br,taxshare5,v36,c(5:1),"c(8, 9)"
+issp1999dk,grow5,v23,c(1:5),"c(8, 9)"
+issp1999dk,incgap5,v56,c(5:1),"c(8, 9)"
+issp1999dk,gov_res5,v57,c(5:1),"c(8, 9)"
+issp1999dk,taxshare5,v66,c(5:1),"c(8, 9)"
+issp1999ie,grow5,v23,c(1:5),"c(8, 9)"
+issp1999ie,incgap5,v56,c(5:1),"c(8, 9)"
+issp1999ie,gov_res5,v57,c(5:1),"c(8, 9)"
+issp1999ie,taxshare5,v66,c(5:1),"c(8, 9)"
+issp1999nl,grow5,v11,c(1:5),"c(8, 9)"
+issp1999nl,incgap5,v34,c(5:1),"c(8, 9)"
+issp1999nl,gov_res5,v35,c(5:1),"c(8, 9)"
+issp1999nl,taxshare5,v36,c(5:1),"c(8, 9)"
+issp1999ch,grow5,v11,c(1:5),"c(8, 9)"
+issp1999ch,incgap5,v34,c(5:1),"c(8, 9)"
+issp1999ch,gov_res5,v35,c(5:1),"c(8, 9)"
+issp1999ch,taxshare5,v36,c(5:1),"c(8, 9)"
 issp2000,gov_res5,v5,c(5:1),
 issp2000,redist5,v65,c(5:1),
 issp2006,gov_res4,v31,c(4:1),
-issp2009,gov_res5,v33,c(5:1),
-issp2009,incgap5,v32,c(5:1),
-issp2009,taxshare5,v36,c(5:1),
-issp2010,gov_res5,v8,c(5:1),
+issp2006ar,gov_res4,v31,c(4:1),8
+issp2006ni,gov_res4,v31,c(4:1),"c(8, 9)"
+issp2009,gov_res5,v33,c(5:1),"c(8, 9)"
+issp2009,incgap5,v32,c(5:1),"c(8, 9)"
+issp2009,taxshare5,v36,c(5:1),"c(8, 9)"
+issp2009ca,incgap5,v32,c(5:1),"c(8, 9)"
+issp2009ca,gov_res5,v33,c(5:1),"c(8, 9)"
+issp2009ca,taxshare5,v36,c(5:1),"c(8, 9)"
+issp2010,gov_res5,v8,c(5:1),"c(8, 9)"
+issp2010au,gov_res5,v8,c(5:1),"c(8, 9)"
+issp2010nl,gov_res5,v8,c(5:1),"c(8, 9)"
+issp2010is,gov_res5,v8,c(5:1),"c(8, 9)"
+issp2010pt,gov_res5,v8,c(5:1),"c(8, 9)"
 issp2016,gov_res4,v27,c(4:1),"c(8, 9)"
 jgss,gov_res5,q5gveqaa,c(5:1),9
 kgss,gov_res5,goveqinc,c(5:1),"c(-8, -1)"
