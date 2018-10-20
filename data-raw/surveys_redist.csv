@@ -218,7 +218,7 @@ jgss,gov_res5,q5gveqaa,c(5:1),9
 kgss,gov_res5,goveqinc,c(5:1),"c(-8, -1)"
 kgss,incgap5,incgap,c(5:1),"c(-8, -1)"
 lat198312,gov_res4,q107,c(4:1),"c(5, 6)"
-lb1996,gov_res4,p28e,c(4:1),
+lb1996,gov_res4,p28e,c(4:1),"c(-1, -2)"
 pgss,grow5,in103c,c(1:5),8
 pgss,gov_res5,in107b,c(5:1),8
 prri201111,effort4,q7b,c(4:1),"c(8, 9)"
