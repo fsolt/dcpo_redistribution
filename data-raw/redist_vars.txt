@@ -188,13 +188,7 @@ between the rich and the poor?
     8.  Can’t choose, don’t know
     9.  NA
 
-gov_res5
-ess gincdif
-Government should reduce differences in income levels
-bsa2017
-It is the responsibility of the government to reduce the differences in income between people with high incomes and those with low incomes
-icenes gincdif
-Government should use its power to increase the equality of the income distribution in society
+gov_res4a
 
 AsianB2 q145 [I don't have these data]
 In order to preserve social justice, the government should prevent the gap between rich and poor from growing any larger. SA 1 SWA 2 SWD 3 D 4 Don't understand 7 Can't choose 8 decline 9
@@ -214,6 +208,12 @@ and those with low incomes
        <AUS: not sure>
     9. NA
     0. PL: Not available
+
+ess gincdif
+Government should reduce differences in income levels
+icenes gincdif
+Government should use its power to increase the equality of the income distribution in society
+
 
 gov_res7
 AmB ros3
