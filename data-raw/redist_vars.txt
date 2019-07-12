@@ -191,6 +191,8 @@ between the rich and the poor?
 gov_res5
 ess gincdif
 Government should reduce differences in income levels
+bsa2017
+It is the responsibility of the government to reduce the differences in income between people with high incomes and those with low incomes
 icenes gincdif
 Government should use its power to increase the equality of the income distribution in society
 
