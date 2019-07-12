@@ -237,6 +237,6 @@ usgss,incent4,incentiv,c(1:4)
 usgss,incgap5,incgap,c(5:1)
 usgss,taxshare5,taxshare,c(5:1)
 usicr200302,gov_res4,qn20,c(4:1)
-uswapo199807,gov_res5,q18d,c(5:1)
+uswapo199807,gov_res4,q18d,"c(5:4,2:1)"
 wvs_combo,free_eq2,e032,c(1:2)
 wvs_combo,incent10,e035,c(10:1)
