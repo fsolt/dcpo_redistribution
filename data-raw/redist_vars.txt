@@ -57,6 +57,16 @@ TRY AND REDUCE THE NUMBER BOTH OF VERY RICH AND VERY POOR PEOPLE
 3 FAIRLY IMPORTANT
 4 NOT IMPORTANT AT ALL
 
+import4a
+evs2017 v221
+
+What should a society provide? Please indicate for each statement if it is important or unimportant to you:
+Q62.A Eliminating big inequalities in income between citizens
+1 very important
+2 quite important
+3 not important
+4 not at all important
+
 import2
 EB44.3 v490
 Q.105_10 It is very important to try and reduce the difference between the very rich and the very poor people
@@ -190,7 +200,7 @@ between the rich and the poor?
 
 gov_res4a
 
-AsianB2 q145 [I don't have these data]
+AsianB2 q145
 In order to preserve social justice, the government should prevent the gap between rich and poor from growing any larger. SA 1 SWA 2 SWD 3 D 4 Don't understand 7 Can't choose 8 decline 9
 
 gov_res5
