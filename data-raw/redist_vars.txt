@@ -41,9 +41,6 @@ effort5
 ptvs2008 CS_G21.18; ptvs2012
 Bigger efforts would have to be made to reduce the income inequalities
 
-
-The government should take measures to reduce differences in income levels
-
 import4
 EB10-78 v54; EB20-83 v45; EB28-87 v195, EB36-91 v220; EB44.1-95 v602; EB5-76 v7; EB6-77 v75
 HERE IS A LIST OF PROBLEMS THAT PEOPLE OF (YOUR COUNTRY) ARE MORE OR LESS INTERESTED IN. (SHOW CARD)
@@ -223,6 +220,8 @@ ess gincdif
 Government should reduce differences in income levels
 icenes gincdif
 Government should use its power to increase the equality of the income distribution in society
+cses4
+The government should take measures to reduce differences in income levels
 
 
 gov_res7
