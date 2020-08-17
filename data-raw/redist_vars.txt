@@ -288,7 +288,7 @@ basic income.
     0. PL: Not available
 
 incent4
-ISSP87 V18; ISSP92 V18; USGSS INCENTIV; ALLBUS v206
+ISSP87 V18; ISSP92 V18; USGSS INCENTIV; ALLBUS im19
 Some people earn a lot of money while others do not earn
 very much at all ...
 In order to get people to work hard, do you think large

@@ -1,3 +1,7 @@
+library(rstan)
+library(DCPO)
+library(tidyverse)
+
 #Postprocessing
 x1 <- summary(out1)
 write.table(as.data.frame(x1$summary), file="x1.csv", sep = ",")
@@ -19,12 +23,12 @@ ggsave(paste0("rhat_", iter, ".pdf"))
 
 
 
-qcodes <- red_3y %>% group_by(variable) %>%
+qcodes <- x %>% group_by(variable) %>%
 	summarize(qcode = first(qcode),
 						r_n = n()) %>%
 	arrange(qcode)
 
-rcodes <- red_3y %>% group_by(variable_cp) %>%
+rcodes <- x %>% group_by(variable_cp) %>%
 	summarize(rcode = first(rcode),
 						r_n = n()) %>%
 	arrange(rcode)
