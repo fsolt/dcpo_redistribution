@@ -194,8 +194,8 @@ cby_plot + ybc_plot
 
 ```{r dcpo_input}
 dcpo_input <- DCPOtools::format_dcpo(dcpo_input_raw1,
-                                     scale_q = "polileader4",
-                                     scale_cp = 2)
+                                     scale_q = "gov_res5",
+                                     scale_cp = 3)
 save(dcpo_input, file = here::here("data", "dcpo_input.rda"))
 ```
 
