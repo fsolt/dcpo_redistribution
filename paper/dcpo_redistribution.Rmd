@@ -1,0 +1,293 @@
+---
+output: 
+  pdf_document:
+    citation_package: natbib
+    keep_tex: true
+    fig_caption: true
+    latex_engine: pdflatex
+    template: svm-latex-ms2.tex
+title: "[dcpo_redistribution]"
+thanks: "Corresponding author: [frederick-solt@uiowa.edu](mailto:frederick-solt@uiowa.edu).  Current version: `r format(Sys.time(), '%B %d, %Y')`."
+author:
+  - name: Frederick Solt
+    affiliation: University of Iowa
+abstract: ""
+keywords: ""
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+fontsize: 11pt
+spacing: double
+bibliography: \dummy{`r file.path(getwd(), list.files(getwd(), ".bib$", recursive = TRUE))`}
+# csl: https://raw.githubusercontent.com/citation-style-language/styles/master/american-political-science-association.csl
+biblio-style: apsr
+citecolor: black
+linkcolor: black
+endnote: no
+header-includes:
+      - \usepackage{array}
+      - \usepackage{caption}
+      - \usepackage{graphicx}
+      - \usepackage{siunitx}
+      - \usepackage{colortbl}
+      - \usepackage{multirow}
+      - \usepackage{hhline}
+      - \usepackage{calc}
+      - \usepackage{tabularx}
+      - \usepackage{threeparttable}
+      - \usepackage{wrapfig}
+nocite: |
+  @Solt2020a
+---
+
+```{r setup, include=FALSE}
+options(tinytex.verbose = TRUE)
+
+knitr::opts_chunk$set(cache = TRUE, echo = FALSE, fig.width=6.5, fig.height=2.5, cache.extra = tools::md5sum(here::here("data", "dcpo_input_raw.csv")))
+
+# If `DCPOtools` is not yet installed:
+# remotes::install_github("fsolt/DCPOtools")
+
+library(DCPOtools)
+library(DCPO)
+library(tidyverse)
+
+set.seed(324)
+```
+
+
+
+# The Source Data on Attitude Toward Redistribution
+
+```{r dcpo_input_raw, include=FALSE, cache.extra = tools::md5sum(here::here("data-raw", "surveys_redist.csv"))}
+surveys_redist <- read_csv(here::here("data-raw", "surveys_redist.csv"),
+                        col_types = "cccc")
+
+dcpo_input_raw <- DCPOtools::dcpo_setup(vars = surveys_redist,
+                                        datapath = here::here("..", "data", "dcpo_surveys"),
+                                        file = here::here("data", "dcpo_input_raw.csv"))
+```
+
+```{r redist_summary_stats}
+dcpo_input_raw1 <- dcpo_input_raw %>% 
+  with_min_yrs(2) %>% 
+  with_min_cy(5) %>% 
+  group_by(country) %>% 
+  mutate(cc_rank = n()) %>% 
+  ungroup() %>% 
+  arrange(-cc_rank)
+
+n_surveys <- surveys_redist %>%
+  distinct(survey) %>% 
+  nrow()
+
+n_items <- dcpo_input_raw1 %>%
+  distinct(item) %>% 
+  nrow()
+
+n_countries <- dcpo_input_raw1 %>%
+  distinct(country) %>% 
+  nrow()
+
+n_years <- as.integer(summary(dcpo_input_raw1$year)[6]-summary(dcpo_input_raw1$year)[1])
+
+total_cy <- {n_countries * n_years} %>% 
+  scales::comma()
+
+year_range <- paste("from",
+                    summary(dcpo_input_raw1$year)[1],
+                    "to",
+                    summary(dcpo_input_raw1$year)[6])
+
+n_cyi <- dcpo_input_raw1 %>% 
+  distinct(country, year, item) %>% 
+  nrow() %>% 
+  scales::comma()
+```
+
+The first step towards remedying this problem is collecting the available public opinion data on attitudes on redistribution.
+We draw on data from `r n_surveys` survey datasets, in which we identified `r n_items` distinct relevant survey items that were asked in no fewer than five country-years.
+Together, these survey items were asked in `r n_countries` different countries in at least two time points over `r n_years` years, `r year_range`, yielding a total of `r n_cyi` country-year-item observations.
+Considering that observations for every year in each country surveyed would number `r total_cy` and so a complete set of country-year-items would encompass `r {n_countries * n_years * n_items} %>% scales::comma()` observations, the available data is clearly very, very sparse.
+
+```{r obs_by_item, fig.height=3, fig.cap = "Items with the Most Observations in the Source Data \\label{items_by_obs}"}
+dcpo_input_raw1 %>%
+  distinct(country, year, item) %>%
+  count(item) %>%
+  arrange(desc(n)) %>% 
+  head(12) %>% 
+  ggplot(aes(forcats::fct_reorder(item, n, .desc = TRUE), n)) +
+  geom_bar(stat = "identity") +
+  theme_bw() +
+  theme(axis.title.x = element_blank(),
+        axis.text.x  = element_text(angle = 90, vjust = .45, hjust = .95)) +
+  ylab("Country-Years Observed")
+
+gov_res5_cy <- dcpo_input_raw1 %>% filter(item == "gov_res5") %>% distinct(country, year) %>% nrow()
+
+gov_res5_surveys <- dcpo_input_raw1 %>% filter(item == "gov_res5") %>% distinct(survey) %>% pull(survey) %>% str_split(", ") %>% unlist() %>% str_replace("([a-z]+).*", "\\1") %>% unique()
+```
+
+Figure&nbsp;\ref{items_by_obs} displays in how many country-years each of the twelve most-commonly asked items are available.
+
+
+Which countries are the most data-rich?
+Figure&nbsp;\ref{countries_by_obs} below shows the dozen countries with the highest count of country-year-item observations.
+
+
+```{r obs_by_country, fig.cap = "Countries with the Most Observations in the Source Data \\label{countries_by_obs}"}
+dcpo_input_raw1 %>%
+  mutate(country = if_else(stringr::str_detect(country, "United"),
+                           stringr::str_replace(country, "((.).*) ((.).*)", "\\2.\\4."),
+                           country)) %>% 
+  distinct(country, year, item) %>% 
+  count(country) %>%
+  arrange(desc(n)) %>% 
+  head(12) %>% 
+  ggplot(aes(forcats::fct_reorder(country, n, .desc = TRUE), n)) +
+  geom_bar(stat = "identity") +
+  theme_bw() +
+  theme(axis.title.x = element_blank(),
+        axis.text.x  = element_text(angle = 90, vjust = .45, hjust = .95)) +
+  ylab("Year-Items Observed")
+
+# uk_nas <- {1 + max(swiid_source$year) - min(swiid_source$year) - 
+# {swiid_source %>% filter(country == "United Kingdom") %>% pull(year) %>% unique() %>% length()}} %>%
+# wordify_numeral()
+# 
+# iran_obs <- swiid_source %>% filter(country == "Iran") %>% pull(year) %>% unique() %>% length()
+# 
+# med_cy <- swiid_source %>% count(country, year) %>% count(country, name = "nn") %>% pull(nn) %>% median() %>% wordify_numeral()
+```
+
+```{r years_by_country, fig.cap="Country-Year Coverage in the Source Data \\label{countries_by_years}"}
+library(patchwork)
+
+cby_plot <- dcpo_input_raw1 %>%
+  mutate(country = if_else(stringr::str_detect(country, "United"),
+                           stringr::str_replace(country, "((.).*) ((.).*)", "\\2.\\4."),
+                           country),
+         country = stringr::str_replace(country, "South", "S.")) %>% 
+  distinct(country, year) %>%
+  count(country) %>% 
+  arrange(desc(n)) %>% 
+  head(12) %>% 
+  ggplot(aes(forcats::fct_reorder(country, n, .desc = TRUE), n)) +
+  geom_bar(stat = "identity") +
+  theme_bw() +
+  theme(axis.title.x = element_blank(),
+        axis.text.x  = element_text(angle = 90, vjust = .45, hjust = .95)) +
+  ylab("Years Observed")
+
+
+ybc_plot <- dcpo_input_raw1 %>%
+  distinct(country, year) %>%
+  count(year, name = "nn") %>%
+  ggplot(aes(year, nn)) +
+  geom_bar(stat = "identity") +
+  theme_bw() +
+  theme(axis.title.x = element_blank(),
+        axis.text.x  = element_text(angle = 90, vjust = .45, hjust = .95)) +
+  ylab("Countries Observed")
+
+cby_plot + ybc_plot
+```
+
+
+```{r dcpo_input}
+dcpo_input <- DCPOtools::format_dcpo(dcpo_input_raw1,
+                                     scale_q = "polileader4",
+                                     scale_cp = 2)
+save(dcpo_input, file = here::here("data", "dcpo_input.rda"))
+```
+
+# Estimating Redistributive Attitudes
+
+The DCPO model is estimated using the `DCPO` package for R [@Solt2020a], which is written in the Stan probabilistic programming language [@StanDevTeam2019a; @StanDevTeam2019b].
+
+```{r dcpo, eval=FALSE}
+iter <- 4000
+
+dcpo_output <- dcpo(dcpo_input,
+                    iter = iter,
+                    chains = 4,
+                    thin = iter/500, # this yields 250 draws per chain, 1000 draws total
+                    pars = c("sd_delta","sd_theta_evolve", "sd_sigma_evolve", "sigma","phi","beta","alpha","delta","theta","y_r_pred","log_lik"))
+
+save(dcpo_output, file = here::here("data", "dcpo_output.rda"))
+
+dcpo_theta <- rstan::extract(dcpo_output, pars = "theta")
+
+save(dcpo_theta, file = here::here("data", "dcpo_theta.rda"))
+
+dcpo_sigma <- rstan::extract(dcpo_output, pars = "sigma")
+
+save(dcpo_theta, file = here::here("data", "dcpo_sigma.rda"))
+
+dcpo_y_r_pred <- rstan::extract(dcpo_output, pars = "y_r_pred")
+
+save(dcpo_input, dcpo_y_r_pred, file = here::here("data", "dcpo_y_r_pred.rda"))
+```
+
+```{r cs_plot, fig.cap="Attitudes Toward Redistribution, 2020 \\label{cs_2020}", fig.height=8, warning=FALSE}
+load(here::here("data", "dcpo_input.rda"))
+load(here::here("data", "dcpo_output.rda"))
+
+theta_results <- DCPO::summarize_dcpo_results(dcpo_input,
+                                              dcpo_output,
+                                              "theta")
+
+sigma_results <- DCPO::summarize_dcpo_results(dcpo_input,
+                                              dcpo_output,
+                                              "sigma")
+
+p1_data <- theta_results %>%
+    group_by(country) %>%
+    top_n(1, year) %>%
+    ungroup() %>%
+    arrange(-mean) %>%
+    mutate(half = ntile(mean, 2))
+
+p1_data_a <- p1_data %>% filter(half==2) %>% mutate(ranked = as.factor(row_number(mean)))
+p1_data_b <- p1_data %>% filter(half==1) %>% mutate(ranked = as.factor(row_number(mean)))
+
+p1a <- ggplot(p1_data_a, aes(x = mean,
+                             y = ranked)) +
+    geom_segment(aes(x = `10%`, xend = `90%`,
+                     y = ranked, yend = as.factor(ranked)),
+                 na.rm = TRUE) +
+    geom_point(fill = "black", shape = 21, size = 1.1, na.rm = TRUE) +
+    theme_bw() + theme(legend.position="none",
+                       axis.text.x  = element_text(size=8),
+                       axis.text.y  = element_text(size=8),
+                       axis.title.x = element_text(face="bold", size=8),
+                       legend.text = element_text(size = 7),
+                       legend.title = element_text(size=7, face = "bold"),
+                       legend.key.size = unit(.5, "line"),
+                       legend.background = element_rect(linetype = "solid",
+                                                        color = "grey80",
+                                                        size = .25),
+                       legend.key = element_rect(colour = "white")) +
+    scale_y_discrete(breaks = p1_data_a$ranked, labels=p1_data_a$country) +
+    coord_cartesian(xlim=c(0, 1)) +
+    labs(x = NULL, y = NULL)
+
+p1b <- ggplot(p1_data_b, aes(x = mean,
+                             y = ranked)) +
+    geom_segment(aes(x = `10%`, xend = `90%`,
+                     y = ranked, yend = ranked),
+                 na.rm = TRUE) +
+    geom_point(fill = "black", shape = 21, size = 1.1, na.rm = TRUE) +
+    theme_bw() + theme(legend.position="none",
+                       axis.text.x  = element_text(size=8),
+                       axis.text.y  = element_text(size=8),
+                       axis.title.x = element_text(face="bold", size=8)) +
+    scale_y_discrete(breaks = p1_data_b$ranked, labels=p1_data_b$country) +
+    coord_cartesian(xlim=c(0, 1)) +
+    labs(x = NULL, y = NULL)
+
+p1a + p1b
+
+```
+
+# Conclusion
+
+\pagebreak
